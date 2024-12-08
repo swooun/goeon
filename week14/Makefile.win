@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = ../../../main.o ../../../board.o
-LINKOBJ  = ../../../main.o ../../../board.o
+OBJ      = main.o board.o
+LINKOBJ  = main.o board.o
 LIBS     = -L"C:/Users/HI/OneDrive - 숙명여자대학교/바탕 화면/Dev-Cpp/MinGW64/lib" -L"C:/Users/HI/OneDrive - 숙명여자대학교/바탕 화면/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Users/HI/OneDrive - 숙명여자대학교/바탕 화면/Dev-Cpp/MinGW64/include" -I"C:/Users/HI/OneDrive - 숙명여자대학교/바탕 화면/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/HI/OneDrive - 숙명여자대학교/바탕 화면/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Users/HI/OneDrive - 숙명여자대학교/바탕 화면/Dev-Cpp/MinGW64/include" -I"C:/Users/HI/OneDrive - 숙명여자대학교/바탕 화면/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/HI/OneDrive - 숙명여자대학교/바탕 화면/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/HI/OneDrive - 숙명여자대학교/바탕 화면/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -24,8 +24,8 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-../../../main.o: ../../../main.c
-	$(CC) -c ../../../main.c -o ../../../main.o $(CFLAGS)
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
 
-../../../board.o: ../../../board.c
-	$(CC) -c ../../../board.c -o ../../../board.o $(CFLAGS)
+board.o: board.c
+	$(CC) -c board.c -o board.o $(CFLAGS)
